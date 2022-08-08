@@ -4,55 +4,42 @@ import { IBuildInEvent } from '../../utils/enum'
 import { ILocalesKey } from '../../i18n/zh-CN'
 
 const handle = async (ctx: IPicGo): Promise<IPicGo> => {
-  const githubOptions = ctx.getConfig<IMinioConfig>('picBed.minio')
-  if (!githubOptions) {
+  const minioOptions = ctx.getConfig<IMinioConfig>('picBed.minio')
+  if (!minioOptions) {
     throw new Error('Can\'t find minio config')
   }
   const {
     endPoint,
-    port,
+    // port,
     accessKey,
     secretKey,
     bucketName,
-    useSSL,
+    // useSSL,
     region,
     transport,
-    sessionToken,
-    partSize
-  } = githubOptions
+    sessionToken
+    // partSize
+  } = minioOptions
 
   var minioClient = new Minio.Client({
     endPoint,
-    port,
-    useSSL,
     accessKey,
     secretKey,
     region,
     transport,
-    sessionToken,
-    partSize
+    sessionToken
+    // partSize
   })
-  const realImgUrlPre = `${endPoint}/${bucketName}/`
-
-  // const realUrl = `${host}/api/v4/projects/${project_id}/repository/files/${path}%2F`
 
   try {
     const imgList = ctx.output
     for (const img of imgList) {
       if (img.fileName && img.buffer) {
-        const base64Image = img.base64Image || Buffer.from(img.buffer).toString('base64')
-        const result = await minioClient.putObject(bucketName, img.fileName, base64Image)
-        if (result.etag && result.versionId) {
-          delete img.base64Image
-          delete img.buffer
-          img.imgUrl = `${realImgUrlPre}${img.fileName}`
-        } else {
-          ctx.emit(IBuildInEvent.NOTIFICATION, {
-            title: ctx.i18n.translate<ILocalesKey>('UPLOAD_FAILED'),
-            body: '上传失败！'
-          })
-          throw new Error('Server error, please try again')
-        }
+        await minioClient.putObject(bucketName, img.fileName, img.buffer)
+        const realImgUrlPre = `https://${endPoint}/${bucketName}/${img.fileName}`
+        img.imgUrl = realImgUrlPre
+        delete img.base64Image
+        delete img.buffer
       }
     }
     return ctx

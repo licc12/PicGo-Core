@@ -14,7 +14,7 @@ class DB {
         this.db.set('picBed', {
           uploader: 'minio',
           current: 'minio'
-        }).write()
+        })
       } catch (e: any) {
         this.ctx.log.error(e)
         throw e

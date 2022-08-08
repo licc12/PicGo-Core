@@ -264,7 +264,7 @@ export interface IGitlabConfig {
 
 /** Minio 图床配置项 */
 export interface IMinioConfig {
-  /** endPoint是一个主机名或者IP地址 (eg:https://minio.com) */
+  /** endPoint是一个主机名或者IP地址 (eg: minio.com) */
   endPoint: string
   /** TCP/IP端口号。可选，默认值是，如果是http,则默认80端口，如果是https,则默认是443端口。 */
   port: number

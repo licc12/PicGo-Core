@@ -30,10 +30,4 @@
         "weibo"
     ],
     "typescript.tsdk": "node_modules\\typescript\\lib",
-
-    "picgo.picBed.minio.group": "common",
-    "picgo.picBed.minio.host": "https://git.sec.gwm.com.cn",
-    "picgo.picBed.minio.path": "test11",
-    "picgo.picBed.minio.project": "gdc-picture",
-    "picgo.picBed.minio.project_id": "79"
 }

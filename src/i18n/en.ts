@@ -54,7 +54,7 @@ export const EN: ILocales = {
 
   // Minio
   PICBED_MINIO: 'Minio',
-  PICBED_MINIO_ENDPOINT: 'An endPoint is a host name or IP address.(eg:https://minio.com)',
+  PICBED_MINIO_ENDPOINT: 'An endPoint is a host name or IP address.(eg: minio.com)',
   PICBED_MINIO_PORT: 'TCP/IP port number. Optional. The default value is port 80 for HTTP and port 443 for HTTPS.',
   PICBED_MINIO_ACCESSKEY: 'An accessKey is similar to a user ID and is used to uniquely identify your account.',
   PICBED_MINIO_SECRETKEY: 'SecretKey is the password to your account.',
