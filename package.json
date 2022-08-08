@@ -28,12 +28,6 @@
     "upload",
     "util"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-customizable"
@@ -64,6 +58,7 @@
     "@types/md5": "^2.1.32",
     "@types/mime-types": "^2.1.0",
     "@types/minimatch": "^3.0.3",
+    "@types/minio": "^7.0.13",
     "@types/node": "^10.5.2",
     "@types/request-promise-native": "^1.0.15",
     "@types/resolve": "^0.0.8",
@@ -110,6 +105,7 @@
     "mime-types": "2.1.33",
     "minimatch": "^3.0.4",
     "minimist": "^1.2.5",
+    "minio": "^7.0.29",
     "qiniu": "^7.2.1",
     "request": "^2.87.0",
     "request-promise-native": "^1.0.5",
@@ -121,7 +117,7 @@
     "url": "git+https://github.com/PicGo/PicGo-Core.git"
   },
   "picBed": {
-    "current": "smms"
+    "current": "minio"
   },
   "plugins": {},
   "engines": {

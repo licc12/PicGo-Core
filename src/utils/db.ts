@@ -12,9 +12,9 @@ class DB {
     if (!this.db.has('picBed')) {
       try {
         this.db.set('picBed', {
-          uploader: 'smms',
-          current: 'smms'
-        })
+          uploader: 'minio',
+          current: 'minio'
+        }).write()
       } catch (e: any) {
         this.ctx.log.error(e)
         throw e

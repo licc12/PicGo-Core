@@ -40,6 +40,30 @@ export const ZH_CN = {
   PICBED_GITHUB_BRANCH: '设定分支名',
   PICBED_GITHUB_CUSTOMURL: '设定自定义域名',
 
+  // https://git.sec.gwm.com.cn/common/gdc-picture/-/raw/dev/app/project1.jpg
+  // GitLab
+  PICBED_GITLAB: 'GitLab',
+  PICBED_GITLAB_HOST: 'Gitlab服务器域名',
+  PICBED_GITLAB_GROUP: 'Gitlab Group名称',
+  PICBED_GITLAB_PEOGECT: 'Gitlab 项目名称',
+  PICBED_GITLAB_PEOGECT_ID: 'Gitlab 项目ID',
+  PICBED_GITLAB_TOKEN: '项目 token',
+  PICBED_GITLAB_BRANCH: '项目 分支',
+  PICBED_GITLAB_PATH: 'image 所在分支里的路径(eg: /dev/image)',
+
+  // Minio
+  PICBED_MINIO: 'Minio',
+  PICBED_MINIO_ENDPOINT: 'Minio主机名或者IP地址(eg:https://minio.com)',
+  PICBED_MINIO_PORT: 'TCP/IP端口号。可选，默认值是，如果是http,则默认80端口，如果是https,则默认是443端口',
+  PICBED_MINIO_ACCESSKEY: 'accessKey类似于用户ID，用于唯一标识你的账户',
+  PICBED_MINIO_SECRETKEY: 'secretKey是你账户的密码',
+  PICBED_MINIO_BUCKETNAME: '存储桶',
+  PICBED_MINIO_USESSL: '如果是true，则用的是https而不是http,默认值是true',
+  PICBED_MINIO_REGION: '设置该值以覆盖自动发现存储桶region。（可选）',
+  PICBED_MINIO_TRANSPORT: '将此值设置为在自定义传输中传递。(可选)',
+  PICBED_MINIO_SESSIONTOKEN: '设置此值以提供x-amz-security-token(特定于AWS S3)。(可选)',
+  PICBED_MINIO_PARTSIZE: '设置此值以覆盖多部分上传的默认部分大小64MB',
+
   // qiniu
   PICBED_QINIU: '七牛云',
   PICBED_QINIU_ACCESSKEY: '设定AccessKey',

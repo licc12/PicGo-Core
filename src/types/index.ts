@@ -244,7 +244,48 @@ export interface ITcyunConfig {
   /** 针对图片的一些后缀处理参数 PicGo 2.4.0+ PicGo-Core 1.5.0+ */
   options: string
 }
-/** GitHub 图床配置项 */
+/** GitLab 图床配置项 */
+export interface IGitlabConfig {
+  /** gitlab服务器host (eg:https://gitlab.com) */
+  host: string
+  /** gitlab project's group name */
+  group: string
+  /** gitlab project name */
+  project: string
+  /** gitlab project id */
+  project_id: string
+  /** gitlab project's branch name */
+  branch: string
+  /** gitlab's api token */
+  token: string
+  /** img path in response json (eg:url or data.url) */
+  path: string
+}
+
+/** Minio 图床配置项 */
+export interface IMinioConfig {
+  /** endPoint是一个主机名或者IP地址 (eg:https://minio.com) */
+  endPoint: string
+  /** TCP/IP端口号。可选，默认值是，如果是http,则默认80端口，如果是https,则默认是443端口。 */
+  port: number
+  /** accessKey类似于用户ID，用于唯一标识你的账户。 */
+  accessKey: string
+  /** secretKey是你账户的密码。 */
+  secretKey: string
+  /** 存储桶 */
+  bucketName: string
+  /** 如果是true，则用的是https而不是http,默认值是true。 */
+  useSSL: boolean
+  /** 设置该值以覆盖自动发现存储桶region。（可选） */
+  region: string
+  /** 将此值设置为在自定义传输中传递。(可选) */
+  transport: string
+  /** 设置此值以提供x-amz-security-token(特定于AWS S3)。(可选) */
+  sessionToken: string
+  /** 设置此值以覆盖多部分上传的默认部分大小64MB */
+  partSize: number
+}
+
 export interface IGithubConfig {
   /** 仓库名，格式是 `username/reponame` */
   repo: string
@@ -503,4 +544,15 @@ export interface II18nManager {
    * get language list
    */
   getLanguageList: () => string[]
+}
+
+export interface IGitPostData {
+  /** 分支名称 */
+  'branch': string
+  /** 编码方式 text or base64; default is text */
+  'encoding': string
+  /** 文件内容 */
+  'content': string
+  /** 提交的信息 */
+  'commit_message': string
 }

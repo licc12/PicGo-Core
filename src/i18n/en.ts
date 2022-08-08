@@ -42,6 +42,29 @@ export const EN: ILocales = {
   PICBED_GITHUB_BRANCH: 'Set Branch',
   PICBED_GITHUB_CUSTOMURL: 'Set Custom URL',
 
+  // GitLab
+  PICBED_GITLAB: 'GitLab',
+  PICBED_GITLAB_HOST: 'Gitlab server host (eg:https://gitlab.com)',
+  PICBED_GITLAB_GROUP: 'gitlab projects group name',
+  PICBED_GITLAB_PEOGECT: 'Gitlab project name',
+  PICBED_GITLAB_PEOGECT_ID: 'gitlab project id',
+  PICBED_GITLAB_TOKEN: 'gitlabs api token',
+  PICBED_GITLAB_BRANCH: 'project branch',
+  PICBED_GITLAB_PATH: 'img path in response json (eg:url or data.url)',
+
+  // Minio
+  PICBED_MINIO: 'Minio',
+  PICBED_MINIO_ENDPOINT: 'An endPoint is a host name or IP address.(eg:https://minio.com)',
+  PICBED_MINIO_PORT: 'TCP/IP port number. Optional. The default value is port 80 for HTTP and port 443 for HTTPS.',
+  PICBED_MINIO_ACCESSKEY: 'An accessKey is similar to a user ID and is used to uniquely identify your account.',
+  PICBED_MINIO_SECRETKEY: 'SecretKey is the password to your account.',
+  PICBED_MINIO_BUCKETNAME: 'Bucket name',
+  PICBED_MINIO_USESSL: 'If true, HTTPS is used instead of HTTP, and the default value is true.',
+  PICBED_MINIO_REGION: 'Set this value to override the region automatically discovered by buckets. (optional)',
+  PICBED_MINIO_TRANSPORT: 'Set this value to pass in a custom transport. (Optional) - To be translated',
+  PICBED_MINIO_SESSIONTOKEN: 'Set this value to provide x-amz-security-token (AWS S3 specific). (Optional) - To be translated',
+  PICBED_MINIO_PARTSIZE: 'Set this value to override default part size of 64MB for multipart uploads. (Optional) - To be translated',
+
   // qiniu
   PICBED_QINIU: 'Qiniu',
   PICBED_QINIU_ACCESSKEY: 'Set AccessKey',
